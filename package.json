@@ -5,7 +5,6 @@
   "license": "MIT",
   "dependencies": {
     "@tensorflow/tfjs": "^0.x",
-    "my-local-dep": "C:\\Users\\rachu\\Documents\\GitHub\\tfjs-yolo-tiny-master\\tfjs-yolo-tiny-master",
     "tfjs-yolo-tiny": "^0.0.5"
   },
   "devDependencies": {
