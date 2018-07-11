@@ -3,6 +3,8 @@ import yolo, { downloadModel } from 'tfjs-yolo-tiny';
 
 import { Webcam } from './webcam';
 
+document.body.style.zoom = 2.0
+
 let model;
 const webcam = new Webcam(document.getElementById('webcam'));
 
