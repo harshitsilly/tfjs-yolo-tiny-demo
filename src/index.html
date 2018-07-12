@@ -159,13 +159,18 @@ h7 {
       background-color: #98dafc !important; /* the background of the words in nav bar when scroll*/
   }
   .navbar-default .navbar-toggle {
-      border-color: #FFFF00; /*IDK*/
-      color: #FFFF00 !important; /*IDK*/
+      border-color: #FFFF00;
+      color: #FFFF00 !important;
+  }
+  .dropdown-menu {
+    background-color:black !important;
+    color:white;
+
   }
   footer .glyphicon {
       font-size: 20px;
       margin-bottom: 20px;
-      color: #FFFF00; /*IDK*/
+      color: #FFFF00;
   }
   .slideanim {visibility:hidden;}
   .slide {
@@ -222,11 +227,18 @@ h7 {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+
       <a class="navbar-brand" href="#myPage">YOLO-LITE</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="model.html">LIVE DEMO</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">LIVE DEMO <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="model_coco.html">MS COCO</a></li>
+          <li><a href="model_voc.html">VOC</a></li>
+        </ul>
+        </li>
+        <!-- <li><a href="model_coco.html">LIVE DEMO</a></li> -->
         <li><a href="#about">ABOUT </a></li>
         <li><a href="#examples">EXAMPLES</a></li>
         <li><a href="#gettoknowus">GET TO KNOW US</a></li>

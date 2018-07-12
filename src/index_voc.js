@@ -11,7 +11,7 @@ const webcam = new Webcam(document.getElementById('webcam'));
 (async function main() {
   try {
     ga();
-    model = await downloadModel('https://raw.githubusercontent.com/rachuang22/coco_yolo_js/master/model.json');
+    model = await downloadModel('https://raw.githubusercontent.com/rachuang22/trial14_voc_js/master/model.json');
 
     await webcam.setup();
 
@@ -31,11 +31,12 @@ async function run() {
 
     const t0 = performance.now();
 
-    const boxes = await yolo(inputImage, model);
+    const numclasses = 20;
+    const boxes = await yolo(inputImage, model, numclasses);
 
     const t1 = performance.now();
     // console.log("YOLO inference took " + (t1 - t0) + " milliseconds.");
-    document.getElementById("update").innerText="The model is currently detecting at: \n"+ 1/((t1-t0)/1000) +"\n frames per second."
+    document.getElementById("update").innerText="The model is currently detecting at: \n"+ Math.trunc(1/((t1-t0)/1000)) +"\n frames per second."
 
     boxes.forEach(box => {
       const {
